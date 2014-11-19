@@ -1,0 +1,30 @@
+{
+  "name": "circumflex-configuration",
+  "version": "0.0.1",
+  "description": "Configuration API for Circumflex applications",
+  "main": "index.js",
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inca/circumflex-configuration"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "configuration"
+  ],
+  "author": "Boris Okunskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inca/circumflex-configuration/issues"
+  },
+  "homepage": "https://github.com/inca/circumflex-configuration"
+}
