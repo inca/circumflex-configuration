@@ -1,7 +1,7 @@
 {
-  "name": "circumflex-configuration",
-  "version": "0.0.3",
-  "description": "Configuration API for Circumflex applications",
+  "name": "iconf",
+  "version": "0.0.1",
+  "description": "Simple environment-friendly configuration API",
   "main": "index.js",
   "dependencies": {
     "underscore": "*"
@@ -14,17 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/inca/circumflex-configuration"
+    "url": "https://github.com/inca/iconf"
   },
   "keywords": [
-    "web",
-    "app",
+    "util",
+    "helpers",
     "configuration"
   ],
   "author": "Boris Okunskiy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/inca/circumflex-configuration/issues"
+    "url": "https://github.com/inca/iconf/issues"
   },
-  "homepage": "https://github.com/inca/circumflex-configuration"
+  "homepage": "https://github.com/inca/iconf"
 }

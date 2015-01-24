@@ -4,11 +4,22 @@ var _ = require('underscore')
   , path = require('path');
 
 /**
- * Circumflex Configuration API.
+ * Constructs a configuration object:
  *
- * Most configuration parameters are provided with suitable defaults
- * and can be overridden via process environment variables and supplied `options`
- * (with environment variables taking precedence).
+ * ```
+ * var conf = new Configuration({
+ *   foo: 'foo',
+ *   bar: {
+ *     production: 'BAR',
+ *     development: 'bar'
+ *   },
+ *   production: {
+ *     foo: 'FOO'
+ *   }
+ * });
+ * ```
+ *
+ * Configuration parameters can be overridden via process environment variables.
  *
  * Configuration provides a handy technique called _deflating_: a property
  * can be an object with two keys: `development` and `production`. Actual value
@@ -134,6 +145,7 @@ Configuration.prototype.add = function(key, value, useEnv) {
     // 4. Everything else
     this.set(key, value);
   }
+  return this;
 };
 
 /**
@@ -146,6 +158,7 @@ Configuration.prototype.extend = function(options, useEnv) {
   for (var key in options)
     if (options.hasOwnProperty(key))
       this.add(key, options[key], useEnv);
+  return this;
 };
 
 /**
@@ -166,6 +179,7 @@ Configuration.prototype.set = function(key, value) {
     return memo[word] = memo[word] || {};
   }, this);
   parentObj[words[words.length - 1]] = value;
+  return this;
 };
 
 /**
@@ -184,6 +198,7 @@ Configuration.prototype.remove = function(key) {
     return memo[word] = memo[word] || {};
   }, this);
   delete parentObj[words[words.length - 1]];
+  return this;
 };
 
 /**
