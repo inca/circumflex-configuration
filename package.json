@@ -1,6 +1,6 @@
 {
   "name": "iconf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple environment-friendly configuration API",
   "main": "index.js",
   "dependencies": {
