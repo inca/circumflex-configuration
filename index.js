@@ -77,13 +77,6 @@ var Configuration
 
 };
 
-Object.defineProperty(Configuration.prototype, '__signature', {
-  get: function() {
-    return 'Circumflex Configuration'
-  },
-  configurable: false
-});
-
 /**
  * Adds a configuration object, deflating properties recursively,
  * optionally looking for overrides specified in process environment variables.
